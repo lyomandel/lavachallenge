@@ -14,7 +14,10 @@ Additionally, the server availablity can be verified by querying for the latest 
 
 
 State Tracker:
+
 `state_tracker.go` files.
+
 After running the `lava proxy server` state tracker can be used.
-To run state tracker for the latest 5 blocks run the command `go run state_tracker.go` in terminal.
+
+To run state tracker for the latest 5 blocks run the command `go run state_tracker.go` in another terminal.
 State tracker will print to a file the height & hash values of the 5 latest blocks.
