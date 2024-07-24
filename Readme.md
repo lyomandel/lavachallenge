@@ -1,4 +1,5 @@
 Lava Proxy server:
+
 `server.go` file.
 Run the command `go run server.go` in terminal.
 
