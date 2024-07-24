@@ -78,7 +78,7 @@ func newServer(client pb.ServiceClient) *tenderMintServiceServer {
 	return s
 }
 
-func setup_terndermint_proxy(ctx context.Context) *grpc.Server{
+func setupTendermintProxy(ctx context.Context) *grpc.Server{
 	lavaClient := getLavaGRPCClient(ctx)
 	fmt.Println("Test connection by reading latest block.")
 	lavaClient.GetLatestBlock(ctx, &pb.GetLatestBlockRequest{})
@@ -96,7 +96,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	ctx := context.Background()
-	grpcServer := setup_terndermint_proxy(ctx)
+	grpcServer := setupTendermintProxy(ctx)
 	fmt.Println("Starting to serve!")
 	grpcServer.Serve(lis)
 }
